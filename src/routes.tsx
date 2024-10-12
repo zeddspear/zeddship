@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import MessageBoard from "./pages/MessageBoard";
 import PostsList from "./pages/MessageBoard/pages/PostsList";
 import Post from "./pages/MessageBoard/pages/PostDetails";
-import { welcomeLoader } from "./pages/WelcomePage/Welcome";
 
 export const router = createBrowserRouter([
   {

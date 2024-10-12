@@ -97,7 +97,7 @@ export async function getVoteId(
   userId: string,
   postId: string
 ): Promise<string | undefined> {
-  const { data, error } = await supaClient
+  const { data } = await supaClient
     .from("post_votes")
     .select("id")
     .eq("user_id", userId)

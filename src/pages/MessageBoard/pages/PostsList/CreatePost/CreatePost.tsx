@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { supaClient } from "../../../../../supa-client";
 import { useState } from "react";
 import { useAppContext } from "../../../../../context/AppContext";
@@ -12,7 +11,6 @@ function CreatePost({ newPostCreated = () => {} }) {
   const { userInfo } = useAppContext();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const navigate = useNavigate();
   return (
     <>
       <form
@@ -31,7 +29,6 @@ function CreatePost({ newPostCreated = () => {} }) {
                 console.log(error);
               } else {
                 console.log(data);
-                const newId: string = data as any;
                 // navigate(`/messageboard/post/${newId}`);
                 setTitle("");
                 setContent("");

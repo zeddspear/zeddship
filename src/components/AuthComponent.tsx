@@ -8,6 +8,7 @@ function AuthComponent() {
   //@ts-ignore
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [authView, setAuthView] = useState<"sign_in" | "sign_up">("sign_in");
+
   return (
     <>
       <button
@@ -43,6 +44,7 @@ function AuthComponent() {
                 variables: {
                   default: supabase,
                 },
+
                 className: {
                   container: "grid grid-cols-1 place-content-center",
                   label: "text-white text-xl font-display",

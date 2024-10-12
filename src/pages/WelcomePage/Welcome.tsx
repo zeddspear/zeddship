@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { redirect, replace, useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import ModalBox from "../../components/ModalBox";
 import { supaClient } from "../../supa-client";
 import { useAppContext } from "../../context/AppContext";
