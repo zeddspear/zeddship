@@ -1,0 +1,76 @@
+@import url("https://use.typekit.net/rcr1opg.css");
+@import "./mixins.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  display: block;
+  font-size: 13px;
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  @apply bg-gray-700 text-gray-100;
+  background: linear-gradient(176deg, #12101d 50%, #24203a 100%);
+  min-height: 100vh;
+  background-attachment: fixed;
+  @include scrollbar;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display font-normal text-white text-2xl;
+}
+
+p {
+  @apply font-display font-normal text-white;
+}
+
+svg {
+  width: auto;
+}
+
+.container {
+  @apply max-w-screen-2xl mx-auto px-3 md:px-8;
+}
+
+.grid-list {
+  @apply grid grid-cols-1 auto-cols-max gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 list-none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1px 20px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #725ac1;
+  color: white;
+  border-color: #725ac1;
+
+  &:hover {
+    background-color: adjust-color(#725ac1, $lightness: -10%);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    background-color: adjust-color(#725ac1, $lightness: -20%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
