@@ -59,10 +59,10 @@ npm run build
 
 Tech Stack
 
--React (with TypeScript)
--Supabase (PostgreSQL, Authentication)
--Tailwind CSS (for styling)
--Docker (for local development)
+- React (with TypeScript)
+- Supabase (PostgreSQL, Authentication)
+- Tailwind CSS (for styling)
+- Docker (for local development)
 
 
 
